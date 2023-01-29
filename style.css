@@ -1,5 +1,6 @@
 body {
     background-image: url("img/fundo.png");
+	background-size: 100%;
     font-family: sans-serif;
 }
 
@@ -11,7 +12,7 @@ body {
     font-weight: lighter;
     font-size: 11px;
     float: left; 
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 #idioma {
@@ -19,39 +20,37 @@ body {
     margin-right: 30px; 
     color: white;
     font-size: 11px;
-    text-align: center;
-    
+    text-align: center;  
 }
 
-#idioma:hover #drop{
-    display: block;
-}
-
-#drop {
-    background-color: white;
+#idioma > #drop {
     display: none;
-    width: 90px;
-    border-radius: 1px;
 }
 
-#drop a {
+#idioma:hover > #drop {
+    background-color: white;
+    display: block;
+    width: 70px;
+    border-radius: 1px;
+	text-align: center;
+}
+
+#drop > a {
     color: rgb(92, 91, 91);
     text-decoration: none;
     margin-top: 20px;
     display: inline-block;
-    margin-right: 30px;
-    margin-left: 20px;
+	position: relative;
 }
 
-main {
+main, footer {
     text-align: center;
 }
-
 form {
     background-color: white;
-    width: 350px;
+    width: 320px;
     border-radius: 3px;
-    margin-top: 70px;
+    margin-top: 50px;
     display: inline-block
 }
 
@@ -66,10 +65,30 @@ form {
 
 input {
     height: 35px;
-    width: 260px;
+    width: 240px;
     border: solid 1px #d7d7c1;
     border-radius: 3px;
-    
+}
+
+input:focus {
+	border: solid 1px #ff3333;
+	box-shadow: 3px 3px 5px #ffb3b3, -3px -3px 5px #ffb3b3;
+	outline: 0;
+	border-radius: 3px;
+}
+
+#senha::placeholder {
+	color: transparent;
+	text-align: right;
+	padding: 10px;
+}
+
+#senha:focus::placeholder {
+	background: url("img/placeholder.png");
+	background-size: 7%;
+	background-repeat: no-repeat;
+	background-position: right center;
+	margin-right: 10px;
 }
 
 label {
@@ -97,14 +116,10 @@ label {
     font-size: 12px;
 }
 
-#treetech {
+#linkSite {
     display: inline-block;
-    margin-top: 40px;
+    margin-top: 20px;
     color: white;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: lighter;
-}
-
-footer {
-    text-align: center;
 }
