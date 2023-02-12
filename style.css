@@ -162,13 +162,12 @@ label {
 footer {
 	width: 100%;
 	max-height: 15px;
-	justify-content: center;
 	margin-top: 20px;
+	text-align: center;
 }
 
 #linkSite {
     color: white;
     font-size: 11px;
     font-weight: lighter;
-	margin-right: 5px;
 }
